@@ -50,14 +50,14 @@ class StethoHttpClient implements HttpClient {
 
   @override
   set authenticate(
-    Future<bool> Function(Uri url, String scheme, String realm)? f,
+    Future<bool> Function(Uri url, String scheme, String? realm)? f,
   ) {
     client!.authenticate = f;
   }
 
   @override
   set authenticateProxy(
-    Future<bool> Function(String host, int port, String scheme, String realm)?
+    Future<bool> Function(String host, int port, String scheme, String? realm)?
         f,
   ) {
     client!.authenticateProxy = f;
